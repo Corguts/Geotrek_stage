@@ -4,14 +4,14 @@ import re
 import shutil
 
 # Chemin du dossier contenant les photos
-dossier_source = "C:\\Users\\coren\\Desktop\\signaletique_geotrek\\data\\pieces_jointes"
+dossier_source = "C:\\Users\\chemin du dossier photo"
 
 # Chemin du nouveau dossier où vous voulez copier les photos
-dossier_destination = "C:\\Users\\coren\\Desktop\\signaletique_geotrek\\data\\data_sign_photo"
+dossier_destination = "C:\\Users\\chemin du deuxieme dossier photo qui sera importer"
 
 
 # Chemin du dossier principal contenant les fichiers d'images
-dossier_principal = r"C:\Users\coren\Desktop\signaletique_geotrek\data"
+dossier_principal = r"C:\Users\dossier où se trouve tous les fichiers de données"
 
 # Supprimer le dossier "data_sign_photo" s'il existe
 dossier_sign_photo = os.path.join(dossier_principal, "data_sign_photo")

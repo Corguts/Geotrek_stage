@@ -61,7 +61,7 @@ def rename_images(directory):
             print(file)
 
 # Spécifier le chemin du dossier principal contenant les fichiers d'images
-dossier_principal = r"C:\Users\coren\Desktop\signaletique_geotrek\data\pieces_jointes"
+dossier_principal = r"C:\Users\chemin du dossier des images"
 
 # Appeler la fonction pour renommer les images dans le dossier principal et ses sous-dossiers
 rename_images(dossier_principal)

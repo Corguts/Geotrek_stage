@@ -6,7 +6,7 @@ import pandas as pd
 from pandas import ExcelWriter
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/signaletique_geotrek/environnement/geotrek.env")
+load_dotenv("C:/Users/chemin du fichier d'environnement")
 
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
@@ -143,7 +143,7 @@ conn.close()
 server.stop()
 
 # Chemin vers le dossier principal
-main_directory = "C:/Users/coren/Desktop/signaletique_geotrek/data/data_sign_photo/"
+main_directory = "C:/Users/chemin du dossier principal dans le serveur à distance/"
 
 # Compter le nombre total de photos dans le dossier principal et ses sous-dossiers
 nombre_photos_total = count_photos_in_directory(main_directory)
@@ -177,7 +177,7 @@ for key, value in data.items():
 df = pd.DataFrame(data)
 
 # Chemin vers le fichier Excel existant
-excel_path = "C:/Users/coren/Desktop/nombre_poteaux.xlsx"
+excel_path = "C:/Users/chemin vers l'excel déjà existant.xlsx"
 
 # Export vers Excel sur le bureau
 df.to_excel(excel_path, index=False)
@@ -245,7 +245,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 
 # Chemin vers le fichier Excel existant
-excel_path = "C:/Users/coren/Desktop/nombre_poteaux.xlsx"
+excel_path = "C:chemin vers le fichier excel existant.xlsx"
 
 # Charger le fichier Excel existant
 wb = load_workbook(excel_path)

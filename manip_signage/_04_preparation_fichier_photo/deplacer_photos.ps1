@@ -1,5 +1,5 @@
 # Chemin vers le dossier principal
-$cheminDossier = "C:\Users\coren\Desktop\signaletique_geotrek\data\data_sign_photo"
+$cheminDossier = "C:\Users\chemin du dossier des photos"
 
 # Liste de tous les sous-sous-dossiers
 $sousSousDossiers = Get-ChildItem -Path $cheminDossier -Directory -Recurse

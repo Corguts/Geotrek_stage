@@ -9,7 +9,7 @@ import re
 import geopandas as gpd
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/signaletique_geotrek/environnement/geotrek.env")
+load_dotenv("C:/Users/chemin vers le fichier environnement.env")
 
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
@@ -93,10 +93,10 @@ cur = conn.cursor()
 cur.execute("DROP TABLE IF EXISTS geotrek.image_collector")
 
 # Chemin du dossier local contenant les images
-dossier_local = "C:/Users/coren/Desktop/signaletique_geotrek/data/data_sign_photo/"
+dossier_local = "C:/Users/chemin du dossier des photos/"
 
 # Chemin de base relatif dans le schéma Geotrek
-chemin_base = "paperclip/signage_signage/data_sign_photo/"
+chemin_base = "paperclip/chemin relatif pour récupérer les photos depuis le serveur à distance/"
 
 # Création de la table image_collector
 cur.execute("CREATE TABLE IF NOT EXISTS geotrek.image_collector (id SERIAL PRIMARY KEY, chemin VARCHAR, code_poteau INTEGER,source_id INTEGER)")

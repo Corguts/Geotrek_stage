@@ -1,16 +1,16 @@
 #en bash
 # Chemin vers votre clé privée
-$CHEMIN_CLE_PRIVEE = "C:\Users\coren\.ssh\sshkey_prodgeotrek"
+$CHEMIN_CLE_PRIVEE = "C:\Users\chemin du fichier de la clé privé"
 
 # Utilisateur et adresse du serveur distant
-$UTILISATEUR_SERVEUR="ubuntu"
-$ADRESSE_SERVEUR="54.38.35.185"
+$UTILISATEUR_SERVEUR="nom d'utilisateur"
+$ADRESSE_SERVEUR="adresse IP"
 
 # Chemin vers le dossier sur votre machine locale
-$CHEMIN_LOCAL = "C:\Users\coren\Desktop\signaletique_geotrek\data\data_sign_photo"
+$CHEMIN_LOCAL = "C:\Users\chemin du dossier des photos"
 
 # Chemin vers le répertoire cible sur le serveur distant
-$CHEMIN_SERVEUR = "/opt/geotrek-admin/var/media/paperclip/signage_signage/"
+$CHEMIN_SERVEUR = "/opt/chemin du dossier des photos de la signalétique au serveur à distance/"
 
 
 # Chemin vers le répertoire cible sur le serveur distant
@@ -37,8 +37,8 @@ ssh.exe -i $CHEMIN_CLE_PRIVEE "$UTILISATEUR_SERVEUR@$ADRESSE_SERVEUR" "sudo mv /
 
 #ou alors la méthode ou je créée les varaible de de fonction
 # Commandes pour supprimer le dossier existant et déplacer votre dossier
-COMMANDE_SUPPRESSION="sudo rm -r /opt/geotrek-admin/var/media/paperclip/signage_signage/tmp_img_signage"
-COMMANDE_DEPLACEMENT="sudo mv /home/ubuntu/tmp_img_signa /opt/geotrek-admin/var/media/paperclip/signage_signage/"
+COMMANDE_SUPPRESSION="sudo rm -r /chemin du dossier a supprimer"
+COMMANDE_DEPLACEMENT="sudo mv /chemin de l'emplacement pour déplacer le dossier/"
 
 # Connexion SSH et exécution des commandes sur le serveur distant
 ssh -i "$CHEMIN_CLE_PRIVEE" "$UTILISATEUR_SERVEUR@$ADRESSE_SERVEUR" "$COMMANDE_SUPPRESSION && $COMMANDE_DEPLACEMENT"
@@ -52,8 +52,8 @@ ssh.exe -i $CHEMIN_CLE_PRIVEE "$UTILISATEUR_SERVEUR@$ADRESSE_SERVEUR"
 #utiliser sudo mv pour déplacer le dossier dans la racine donc là où on veut,le sudo veut dire super_utilisateur*
 #les espaces permettent de faire la coupure,il y a le screenshot de comment visualiser ensuite le dossier en script,objectifs de la prochaine fois supprimer le dossier existant,
 #renommer les fichiers des photos dans le dossier pour eviter les soucis avec du python par exemple
-sudo mv ~/tmp_img_signa /opt/geotrek-admin/var/media/paperclip/signage_signage/tmp_img_signa/img_signa_gr46
-sudo mv /home/ubuntu/tmp_img_signa /opt/geotrek-admin/var/media/paperclip/signage_signage
+sudo mv ~/chemin du dossier ajouté des photos
+sudo mv /chemin du dossier photos de la signalétique
 #pour supprimer un dossier, aller directement sur le dossier, on fait 
  sudo rm -r tmp_img_signa
 # le -r permet de dire que ca se répercute sur tous les dossiers et fichiers à l'intérieur du dossier donné
