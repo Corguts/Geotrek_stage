@@ -6,7 +6,7 @@ import psycopg2
 
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/signaletique_geotrek/environnement/geotrek.env")
+load_dotenv("C:/Users/chemin du fichier environnement de geotrek.env")
 
 # Accéder aux variables d'environnement
 SSH_HOST = os.getenv("SSH_HOST")
@@ -66,17 +66,17 @@ def execute_powershell_script(script_path):
 
 
 # Définir les chemins vers les scripts
-BASE_DIR = "C:/Users/coren/Desktop/signaletique_geotrek"
+BASE_DIR = "C:/Users/chemin du dossier de tous les scripts"
 etape0 = os.path.join(BASE_DIR,"_01_a_supprimer_dabord","supprimer_test.sql")
 etape1 = os.path.join(BASE_DIR,"_01_b_shp_to_psql","shp2pgpsql.py")
 etape2 = os.path.join(BASE_DIR,"_02_preparation_donneesgeotrek","_021_refonte_signage_collector.sql")
 etape3 = os.path.join(BASE_DIR,"_02_preparation_donneesgeotrek","_022_signage_intersection.sql")
 etape4 = os.path.join(BASE_DIR,"_03_importationgeotrek","core_topology.sql")
 etape5 = os.path.join(BASE_DIR,"_03_importationgeotrek","signage_signage.sql")
-#etape6 = os.path.join(BASE_DIR,"_04_preparation_fichier_photo","_1_clean_nommage_photo.py")
-#etape7 = os.path.join(BASE_DIR,"_04_preparation_fichier_photo","_2_data_sign_photo.py")
+etape6 = os.path.join(BASE_DIR,"_04_preparation_fichier_photo","_1_clean_nommage_photo.py")
+etape7 = os.path.join(BASE_DIR,"_04_preparation_fichier_photo","_2_data_sign_photo.py")
 etape8 = os.path.join(BASE_DIR,"_05_importation_fichierphoto","importation_chemin_photos.py")
-#etape9 = os.path.join(BASE_DIR,"_05_importation_fichierphoto","importation_fichier_serveurdist.ps1")
+etape9 = os.path.join(BASE_DIR,"_05_importation_fichierphoto","importation_fichier_serveurdist.ps1")
 etape10 = os.path.join(BASE_DIR,"_06_lien_chemin_image_thumbnail","easy_thumbnails_thumbnail.sql")
 etape11 = os.path.join(BASE_DIR,"_07_liaison_attachment_image","common_attachment.sql")
 etape12 = os.path.join(BASE_DIR,"_08_liaison_path_topology","core_pathaggregation.sql")
@@ -119,21 +119,21 @@ if __name__ == "__main__":
     total_etapes += 1
     print("Étape 5 terminée.")
     
-    #etapes_reussies["Étape 6"] = execute_python_script(etape6)
-    #total_etapes += 1
-    #print("Étape 6 terminée.")
+    etapes_reussies["Étape 6"] = execute_python_script(etape6)
+    total_etapes += 1
+    print("Étape 6 terminée.")
 
-    #etapes_reussies["Étape 7"] = execute_python_script(etape7)
-    #total_etapes += 1
-    #print("Étape 7 terminée.")
+    etapes_reussies["Étape 7"] = execute_python_script(etape7)
+    total_etapes += 1
+    print("Étape 7 terminée.")
     
     etapes_reussies["Étape 8"] = execute_python_script(etape8)
     total_etapes += 1
     print("Étape 8 terminée.")
 
-    #etapes_reussies["Etape 9"] = execute_powershell_script(etape9)
-    #total_etapes += 1
-    #print("Étape 9 terminée.")
+    etapes_reussies["Etape 9"] = execute_powershell_script(etape9)
+    total_etapes += 1
+    print("Étape 9 terminée.")
     
     etapes_reussies["Étape 10"] = execute_sql_script(etape10, ssh_server)
     total_etapes += 1
@@ -209,14 +209,14 @@ if __name__ == "__main__":
     etapes_reussies["Etape 5"] = execute_sql_script(etape5, ssh_server)
     print("Étape 5 terminée.")
     
-    #etapes_reussies["Etape 6"] = execute_python_script(etape6)
-    #print("Étape 6 terminée.")
+    etapes_reussies["Etape 6"] = execute_python_script(etape6)
+    print("Étape 6 terminée.")
     
     etapes_reussies["Etape 7"] = execute_python_script(etape7)
     print("Étape 7 terminée.")
     
-    # etapes_reussies["Etape 8"] = execute_powershell_script(etape8)
-    #print("Étape 8 terminée.")
+    etapes_reussies["Etape 8"] = execute_powershell_script(etape8)
+    print("Étape 8 terminée.")
     
     etapes_reussies["Etape 9"] = execute_sql_script(etape9, ssh_server)
     print("Étape 9 terminée.")
