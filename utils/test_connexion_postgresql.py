@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 def connect_to_database():
     try:
         # Charger les variables d'environnement à partir du fichier .env
-        load_dotenv("C:/Users/coren/Desktop/signaletique_geotrek/environnement/geotrek.env")
+        load_dotenv("C:/Users/chemin du fichier envrionnementde geotrek.env")
 
         # Accéder aux variables d'environnement
         DB_USER = os.getenv("DB_USER")
