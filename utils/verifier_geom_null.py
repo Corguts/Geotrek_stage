@@ -34,7 +34,7 @@ def check_null_geometries(folder):
                     print(f"Aucune géométrie nulle dans le fichier {filename}.")
 
 # Chemin du dossier local contenant les fichiers Shapefile
-root_folder = "C:/Users/coren/Desktop/signaletique_geotrek/data"
+root_folder = "C:/Users/chemin du dossier data"
 
 # Appel de la fonction pour vérifier les géométries nulles
 check_null_geometries(root_folder)
