@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/signaletique_geotrek/environnement/local.env")
+load_dotenv("C:/Users/chemin du fichier environnement")
 
 # Accéder aux variables d'environnement
 DB_USER = os.getenv("DB_USER")
