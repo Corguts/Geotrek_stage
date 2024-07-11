@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from sshtunnel import SSHTunnelForwarder
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/stage_geotrek/signaletique_geotrek/environnement/geotrek.env")
+load_dotenv("C:/Users/chemin du fichier environnement de geotrek.env")
 
 # Accéder aux variables d'environnement
 DB_USER = os.getenv("DB_USER")
@@ -73,7 +73,7 @@ def import_gpx_files(folder, engine):
                 print(f"Le fichier {filename} a été importé dans la base de données PostgreSQL dans le schéma geotrek.")
 
 # Chemin du dossier local contenant les fichiers GPX
-root_folder = "C:/Users/coren/Desktop/stage_geotrek/signaletique_geotrek/data/GPX_GR"
+root_folder = "C:/Users/chemin du fichier GPX"
 
 # Configuration du tunnel SSH
 server = SSHTunnelForwarder(
