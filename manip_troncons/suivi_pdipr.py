@@ -10,7 +10,7 @@ import re
 
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/stage_geotrek/signaletique_geotrek/environnement/geotrek.env")
+load_dotenv("C:/Users/chemin du fichier environnement geotrek.env")
 
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
