@@ -1,11 +1,11 @@
-import os
+inimport os
 import geopandas as gpd
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sshtunnel import SSHTunnelForwarder
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv("C:/Users/coren/Desktop/signaletique_geotrek/environnement/geotrek.env")
+load_dotenv("C:/Users/chemin du fichier environnement de geotrek.env")
 
 # Accéder aux variables d'environnement
 DB_USER = os.getenv("DB_USER")
@@ -49,7 +49,7 @@ def import_shapefiles(folder, engine):
 
 
 # Chemin du dossier local contenant les fichiers Shapefile
-root_folder = "C:/Users/coren/Desktop/signaletique_geotrek/data"
+root_folder = "C:/Users/chemin du dossier data où sont les fichiers des jeux de données"
 
 # Configuration du tunnel SSH
 server = SSHTunnelForwarder(
