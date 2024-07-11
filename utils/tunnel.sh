@@ -1,2 +1,2 @@
 echo [Ouverture du tunnel sécurisé de connexion]
-ssh -i C:\Users\coren\.ssh\sshkey_prodgeotrek -L 5665:localhost:5432 ubuntu@54.38.35.185
+ssh -i C:\Users\dossier ssh où se trouve la clé privé -L numéro du port:localhost:5432 ubuntu@adresse IP
