@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 # Charger les variables d'environnement à partir du fichier .env
-load_dotenv(C:/Users/coren/Desktop/signaletique_geotrek/environnement/geotrek.env)
+load_dotenv(C:/Users/chemin du fichier environnement.env)
 
 # Accéder aux variables d'environnement
 DB_USER = os.getenv("DB_USER")
